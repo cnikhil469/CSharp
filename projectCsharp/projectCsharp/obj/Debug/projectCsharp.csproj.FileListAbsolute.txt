@@ -1,0 +1,7 @@
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\obj\Debug\projectCsharp.csproj.AssemblyReference.cache
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\obj\Debug\projectCsharp.csproj.CoreCompileInputs.cache
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\bin\Debug\projectCsharp.exe.config
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\bin\Debug\projectCsharp.exe
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\bin\Debug\projectCsharp.pdb
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\obj\Debug\projectCsharp.exe
+C:\Users\nchap\Documents\C#\projectCsharp\projectCsharp\obj\Debug\projectCsharp.pdb
