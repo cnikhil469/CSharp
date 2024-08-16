@@ -138,8 +138,6 @@ namespace projectCsharp
                     Console.WriteLine("give a 1 <= number <= 8");
                     break;
             }
-<<<<<<< HEAD
-
             Console.Write("repetition word? ");
             string word = Console.ReadLine();
             Console.Write("how many times? ");
@@ -154,8 +152,6 @@ namespace projectCsharp
                     Console.WriteLine(word);
                 }
             }
-=======
->>>>>>> 95cd237266f5e6eb74adcfc4960d22d738994565
             Console.ReadLine();
         }
     }
