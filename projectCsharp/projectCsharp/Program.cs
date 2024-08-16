@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace projectCsharp
 {
@@ -16,22 +18,47 @@ namespace projectCsharp
                 y = 20,
                 z = 30;
             int f;
-
             double val = 25.000D;
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
+            //Console.WriteLine(z);
+            //Console.WriteLine(int.MaxValue);
+            //Console.WriteLine(int.MinValue);
+            //Console.WriteLine(double.MaxValue);
+            //Console.WriteLine(double.MinValue);
+            //Console.WriteLine(float.MaxValue);
+            //Console.WriteLine(float.MinValue);
+            //Console.WriteLine(long.MaxValue);
+            //Console.WriteLine(long.MinValue);
+            //Console.WriteLine(decimal.MaxValue);
+            //Console.WriteLine(decimal.MinValue);
+            string str = "this is string variable!!";
+            char ch = 'a';
+            Console.Write(str);
+            Console.WriteLine(ch);
+            string v1 = "1234567788987";
+            string v2 = "1234567890";
+            string v3 = "-224424";
+            string v4 = "-3.654";
+            string v5 = "-1.452";
 
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine(z);
-            Console.WriteLine(int.MaxValue);
-            Console.WriteLine(int.MinValue);
-            Console.WriteLine(double.MaxValue);
-            Console.WriteLine(double.MinValue);
-            Console.WriteLine(float.MaxValue);
-            Console.WriteLine(float.MinValue);
-            Console.WriteLine(long.MaxValue);
-            Console.WriteLine(long.MinValue);
-            Console.WriteLine(decimal.MaxValue);
-            Console.WriteLine(decimal.MinValue);
+            decimal v6 = Convert.ToDecimal(v1);
+            long v7 = Convert.ToInt64(v2);
+            int v8 = Convert.ToInt32(v3);
+            float v9 = Convert.ToSingle(v4);
+            double v10 = Convert.ToDouble(v5);
+            Console.WriteLine(v6);
+            Console.WriteLine(v7);
+            Console.WriteLine(v8);
+            Console.WriteLine(v9);
+            Console.WriteLine(v10);
+            int h = 50;
+            h *= 10;
+            Console.WriteLine(h);
+            decimal d = 98522M;
+            d++;
+            Console.WriteLine(d);
+            //usage of var. 
 
             //var b = 12345;
             //usage of const variable
@@ -111,6 +138,7 @@ namespace projectCsharp
                     Console.WriteLine("give a 1 <= number <= 8");
                     break;
             }
+<<<<<<< HEAD
 
             Console.Write("repetition word? ");
             string word = Console.ReadLine();
@@ -126,6 +154,8 @@ namespace projectCsharp
                     Console.WriteLine(word);
                 }
             }
+=======
+>>>>>>> 95cd237266f5e6eb74adcfc4960d22d738994565
             Console.ReadLine();
         }
     }
