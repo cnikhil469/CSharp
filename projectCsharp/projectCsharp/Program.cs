@@ -160,6 +160,23 @@ namespace projectCsharp
             {
                 abc = Convert.ToInt32(Console.ReadLine());
             }
+
+            //do while implementation
+            int ans, ans2;
+            do
+            {
+                ans = Convert.ToInt32(Console.ReadLine());
+                Console.Write("what's " + ans + " * " + ans);
+                ans2 = Convert.ToInt32(Console.ReadLine());
+                if (ans == ans2)
+                {
+                    Console.WriteLine("Yahoo!!");
+                }
+                else
+                {
+                    Console.WriteLine("try again!!");
+                }
+            } while (ans != ans2);
             Console.ReadLine();
         }
     }
