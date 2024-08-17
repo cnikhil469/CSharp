@@ -152,6 +152,14 @@ namespace projectCsharp
                     Console.WriteLine(word);
                 }
             }
+
+            //while loop implementation
+
+            int abc = 0;
+            while (abc <= 0)
+            {
+                abc = Convert.ToInt32(Console.ReadLine());
+            }
             Console.ReadLine();
         }
     }
