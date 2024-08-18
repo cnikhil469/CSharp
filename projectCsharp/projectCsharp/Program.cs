@@ -5,13 +5,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Threading;
 
 namespace projectCsharp
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
             //Console.WriteLine("Hello World!");
             //Console.ReadLine(); 
             int x = 10,
@@ -177,6 +178,47 @@ namespace projectCsharp
                     Console.WriteLine("try again!!");
                 }
             } while (ans != ans2);
+            //numeric formating
+            double zxc = -853.235645897D;
+            Console.WriteLine("{0:0.00} * {1}", zxc, 456);
+
+            //tryparse impl
+            Console.WriteLine("tryparse impl now");
+            bool success = true;
+            //do
+            //{
+            //    Console.Write("input a float with a char: ");
+            //    string numInp = Console.ReadLine();
+            //    if (float.TryParse(numInp, out float flInp))
+            //    {
+            //        success = false;
+            //        Console.WriteLine(flInp);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Try again");
+            //    }
+            //}
+            //while (success);
+            int q = 1;
+            int e = 2;
+            Console.WriteLine($"hello this is Nikhil {q} + {h} = {q+h}");
+            Console.WriteLine(string.Concat("hello ", "this is ", "aloha", q));
+            string p = "hello this is Nikhil";
+            char g = 'i';
+            bool aloha = false;
+            for (int i = 0; i < p.Length; i++)
+            {
+                if (p[i].Equals(g))
+                {
+                    Console.WriteLine("yes, it has 'x' in it.");
+                    aloha = true;
+                    break;
+                }
+            }
+            if(!aloha) Console.WriteLine("No, it doesn't 'x' have in it");
+            string r = string.Empty;
+            if(string.IsNullOrEmpty(r)) Console.WriteLine("yes, itw working!!");
             Console.ReadLine();
         }
     }
