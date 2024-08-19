@@ -219,6 +219,46 @@ namespace projectCsharp
             if(!aloha) Console.WriteLine("No, it doesn't 'x' have in it");
             string r = string.Empty;
             if(string.IsNullOrEmpty(r)) Console.WriteLine("yes, itw working!!");
+
+            //print string in reverse
+            Console.Write("enter a string to print that in reverse ");
+            string str1 = Console.ReadLine();
+            if (!string.IsNullOrEmpty(str1))
+            {
+                for (int i = str1.Length -1; i >= 0; i--)
+                {
+                    Console.Write(str1[i]);
+                    Thread.Sleep(250);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Enter a proper string nexttime!!");
+            }
+            //password matching
+            string str2 = "Enter a proper pwd";
+            Console.Write(str2);
+            string str3 = Console.ReadLine();
+            while (string.IsNullOrEmpty(str3))
+            {
+                Console.WriteLine(str2);
+                str3 = Console.ReadLine();
+            }
+            string str4 = Console.ReadLine();
+            while (string.IsNullOrEmpty(str4))
+            {
+                Console.WriteLine(str2);
+                str4 = Console.ReadLine();
+            }
+            if(str4.Equals(str3))
+            {
+                Console.WriteLine("Yahoo!!");
+            }
+            else
+            {
+                Console.WriteLine("No....");
+            }
+
             Console.ReadLine();
         }
     }
