@@ -185,21 +185,21 @@ namespace projectCsharp
             //tryparse impl
             Console.WriteLine("tryparse impl now");
             bool success = true;
-            //do
-            //{
-            //    Console.Write("input a float with a char: ");
-            //    string numInp = Console.ReadLine();
-            //    if (float.TryParse(numInp, out float flInp))
-            //    {
-            //        success = false;
-            //        Console.WriteLine(flInp);
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Try again");
-            //    }
-            //}
-            //while (success);
+            do
+            {
+                Console.Write("input a float with a char: ");
+                string numInp = Console.ReadLine();
+                if (float.TryParse(numInp, out float flInp))
+                {
+                    success = false;
+                    Console.WriteLine(flInp);
+                }
+                else
+                {
+                    Console.WriteLine("Try again");
+                }
+            }
+            while (success);
             int q = 1;
             int e = 2;
             Console.WriteLine($"hello this is Nikhil {q} + {h} = {q+h}");
@@ -250,13 +250,59 @@ namespace projectCsharp
                 Console.WriteLine(str2);
                 str4 = Console.ReadLine();
             }
-            if(str4.Equals(str3))
+            if (str4.Equals(str3))
             {
                 Console.WriteLine("Yahoo!!");
             }
             else
             {
                 Console.WriteLine("No....");
+            }
+            //arrays.
+            //input around 10 numbers from user and print the array having all even nums from that. 
+            Console.WriteLine("input the count of nums");
+            int cnt = Convert.ToInt32(Console.ReadLine());
+            int[] nums = new int[cnt];
+            int value = 0;
+            for (int i = 0; i < cnt; i++)
+            {
+                value = Convert.ToInt32(Console.ReadLine());
+                if (value % 2 == 0)
+                {
+                    nums[i] = value;
+                }
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                Console.Write(nums[i]);
+                Thread.Sleep(250);
+            }
+            Foreach impl
+            int[] nums1 = new int[5] { 1, 2, 3, 4, 5 };
+            foreach (int i in nums1)
+            {
+                Console.WriteLine(i);
+            }
+            //Sorting of an Array
+            Console.WriteLine("provide the count for the array");
+            int cnt3 = Convert.ToInt32(Console.ReadLine());
+            int[] nums2 = new int[cnt3];
+            for(int i = 0;i < cnt3; i++)
+            {
+                nums2[i] = Convert.ToInt32(Console.ReadLine());
+                
+            }
+            Array.Sort(nums2);
+            foreach(int i in nums2)
+            {
+                Console.Write(i);
+                Thread.Sleep(250);
+            }
+            Array.Reverse(nums2);
+            foreach (int i in nums2)
+            {
+                Console.Write(i);
+                Thread.Sleep(250);
             }
 
             Console.ReadLine();
