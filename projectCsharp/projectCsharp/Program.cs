@@ -202,7 +202,7 @@ namespace projectCsharp
             while (success);
             int q = 1;
             int e = 2;
-            Console.WriteLine($"hello this is Nikhil {q} + {h} = {q+h}");
+            Console.WriteLine($"hello this is Nikhil {q} + {h} = {q + h}");
             Console.WriteLine(string.Concat("hello ", "this is ", "aloha", q));
             string p = "hello this is Nikhil";
             char g = 'i';
@@ -216,16 +216,16 @@ namespace projectCsharp
                     break;
                 }
             }
-            if(!aloha) Console.WriteLine("No, it doesn't 'x' have in it");
+            if (!aloha) Console.WriteLine("No, it doesn't 'x' have in it");
             string r = string.Empty;
-            if(string.IsNullOrEmpty(r)) Console.WriteLine("yes, itw working!!");
+            if (string.IsNullOrEmpty(r)) Console.WriteLine("yes, itw working!!");
 
             //print string in reverse
             Console.Write("enter a string to print that in reverse ");
             string str1 = Console.ReadLine();
             if (!string.IsNullOrEmpty(str1))
             {
-                for (int i = str1.Length -1; i >= 0; i--)
+                for (int i = str1.Length - 1; i >= 0; i--)
                 {
                     Console.Write(str1[i]);
                     Thread.Sleep(250);
@@ -287,13 +287,13 @@ namespace projectCsharp
             Console.WriteLine("provide the count for the array");
             int cnt3 = Convert.ToInt32(Console.ReadLine());
             int[] nums2 = new int[cnt3];
-            for(int i = 0;i < cnt3; i++)
+            for (int i = 0; i < cnt3; i++)
             {
                 nums2[i] = Convert.ToInt32(Console.ReadLine());
-                
+
             }
             Array.Sort(nums2);
-            foreach(int i in nums2)
+            foreach (int i in nums2)
             {
                 Console.Write(i);
                 Thread.Sleep(250);
@@ -304,6 +304,14 @@ namespace projectCsharp
                 Console.Write(i);
                 Thread.Sleep(250);
             }
+            Console.WriteLine("Array printing now");
+            int[] nums = new int[] { 1, 2, 3, 4, 5, 6 };
+            Array.Clear(nums, 3, 3);
+            foreach (int i in nums)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine(Array.IndexOf(nums, 4));
 
             Console.ReadLine();
         }
