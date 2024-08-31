@@ -316,18 +316,32 @@ namespace projectCsharp
             //    //}
             //    //Console.WriteLine(Array.IndexOf(nums, 4));
             ////}
-
+            ////Array Concept
             //Console.ReadLine();
             //}
             //int[] nums = new int[] { 'h', 5, 6, 2, 3, 5, 8, 9, 7, 4 };
             //int pos = Array.IndexOf(nums, 7, 2, 5);
             //Console.WriteLine(pos);
-            List<int> nums = new List<int>();
-            for (int i = 0; i < 10; i++)
+            ////List Concepts
+            //List<int> nums = new List<int>();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    nums.Add(Convert.ToInt32(Console.ReadLine()));
+            //}
+            //Console.WriteLine($"The max number in the list is {nums.Max()}"); 
+            ////Dictionary Concepts
+            Dictionary<int, string> numStrings = new Dictionary<int, string>
             {
-                nums.Add(Convert.ToInt32(Console.ReadLine()));
+                {1, "Hello" },
+                {2, "Aloha" },
+                {3, "Finland" }
+            };
+            foreach (var item in numStrings)
+            {
+                Console.Write($"The key is '{item.Key}' and value is '{item.Value}'");
+                Console.WriteLine();
             }
-            Console.WriteLine($"The max number in the list is {nums.Max()}"); 
+
 
             Console.ReadLine();
 
