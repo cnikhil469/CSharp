@@ -319,8 +319,15 @@ namespace projectCsharp
 
             //Console.ReadLine();
             //}
-            int[] nums = new int[] { 'h', 5, 6, 2, 3, 5, 8, 9, 7, 4 };
-            Console.WriteLine(Array.IndexOf(nums, 'h'));
+            //int[] nums = new int[] { 'h', 5, 6, 2, 3, 5, 8, 9, 7, 4 };
+            //int pos = Array.IndexOf(nums, 7, 2, 5);
+            //Console.WriteLine(pos);
+            List<int> nums = new List<int>();
+            for (int i = 0; i < 10; i++)
+            {
+                nums.Add(Convert.ToInt32(Console.ReadLine()));
+            }
+            Console.WriteLine($"The max number in the list is {nums.Max()}"); 
 
             Console.ReadLine();
 
