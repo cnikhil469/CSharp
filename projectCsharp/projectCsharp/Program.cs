@@ -198,66 +198,68 @@ namespace projectCsharp
             //    {
             //        Console.WriteLine("Try again");
             //    }
-            //}
-            //while (success);
-            int q = 1;
-            int e = 2;
-            Console.WriteLine($"hello this is Nikhil {q} + {h} = {q+h}");
-            Console.WriteLine(string.Concat("hello ", "this is ", "aloha", q));
-            string p = "hello this is Nikhil";
-            char g = 'i';
-            bool aloha = false;
-            for (int i = 0; i < p.Length; i++)
-            {
-                if (p[i].Equals(g))
-                {
-                    Console.WriteLine("yes, it has 'x' in it.");
-                    aloha = true;
-                    break;
-                }
-            }
-            if(!aloha) Console.WriteLine("No, it doesn't 'x' have in it");
-            string r = string.Empty;
-            if(string.IsNullOrEmpty(r)) Console.WriteLine("yes, itw working!!");
+            //    ////Foreach impl
+            //    //int[] nums1 = new int[5] { 1, 2, 3, 4, 5 };
+            //    //foreach (int i in nums1)
+            //    //{
+            //    //    Console.WriteLine(i);
+            //    //}
+            //    ////Sorting of an Array
+            //    //Console.WriteLine("provide the count for the array");
+            //    //int cnt3 = Convert.ToInt32(Console.ReadLine());
+            //    //int[] nums2 = new int[cnt3];
+            //    //for (int i = 0; i < cnt3; i++)
+            //    //{
+            //    //    nums2[i] = Convert.ToInt32(Console.ReadLine());
 
-            //print string in reverse
-            Console.Write("enter a string to print that in reverse ");
-            string str1 = Console.ReadLine();
-            if (!string.IsNullOrEmpty(str1))
+            //    //}
+            //    //Array.Sort(nums2);
+            //    //foreach (int i in nums2)
+            //    //{
+            //    //    Console.Write(i);
+            //    //    Thread.Sleep(250);
+            //    //}
+            //    //Array.Reverse(nums2);
+            //    //foreach (int i in nums2)
+            //    //{
+            //    //    Console.Write(i);
+            //    //    Thread.Sleep(250);
+            //    //}
+            //    //Console.WriteLine("Array printing now");
+            //    //int[] nums = new int[] { 1, 2, 3, 4, 5, 6 };
+            //    //Array.Clear(nums, 3, 3);
+            //    //foreach (int i in nums)
+            //    //{
+            //    //    Console.WriteLine(i);
+            //    //}
+            //    //Console.WriteLine(Array.IndexOf(nums, 4));
+            ////}
+            ////Array Concept
+            //Console.ReadLine();
+            //}
+            //int[] nums = new int[] { 'h', 5, 6, 2, 3, 5, 8, 9, 7, 4 };
+            //int pos = Array.IndexOf(nums, 7, 2, 5);
+            //Console.WriteLine(pos);
+            ////List Concepts
+            //List<int> nums = new List<int>();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    nums.Add(Convert.ToInt32(Console.ReadLine()));
+            //}
+            //Console.WriteLine($"The max number in the list is {nums.Max()}"); 
+            ////Dictionary Concepts
+            Dictionary<int, string> numStrings = new Dictionary<int, string>
             {
-                for (int i = str1.Length -1; i >= 0; i--)
-                {
-                    Console.Write(str1[i]);
-                    Thread.Sleep(250);
-                }
-            }
-            else
+                {1, "Hello" },
+                {2, "Aloha" },
+                {3, "Finland" }
+            };
+            foreach (var item in numStrings)
             {
-                Console.WriteLine("Enter a proper string nexttime!!");
+                Console.Write($"The key is '{item.Key}' and value is '{item.Value}'");
+                Console.WriteLine();
             }
-            //password matching
-            string str2 = "Enter a proper pwd";
-            Console.Write(str2);
-            string str3 = Console.ReadLine();
-            while (string.IsNullOrEmpty(str3))
-            {
-                Console.WriteLine(str2);
-                str3 = Console.ReadLine();
-            }
-            string str4 = Console.ReadLine();
-            while (string.IsNullOrEmpty(str4))
-            {
-                Console.WriteLine(str2);
-                str4 = Console.ReadLine();
-            }
-            if(str4.Equals(str3))
-            {
-                Console.WriteLine("Yahoo!!");
-            }
-            else
-            {
-                Console.WriteLine("No....");
-            }
+
 
             Console.ReadLine();
         }
