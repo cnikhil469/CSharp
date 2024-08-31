@@ -341,9 +341,71 @@ namespace projectCsharp
                 Console.Write($"The key is '{item.Key}' and value is '{item.Value}'");
                 Console.WriteLine();
             }
+            KeyValuePair<int, string> pair = numStrings.ElementAt(1);
+            Console.WriteLine($"The key is '{pair.Key}' and value '{pair.Value}'");
+            ////TryGetValue with dict
+            if (numStrings.TryGetValue(1, out string hello))
+            {
+                Console.WriteLine($"the out value is {hello}");
+            }
+            else
+            {
+                Console.WriteLine("The item with that key is not found!!");
+            }
+            ////ContainsKey() & Remove() impl
+            if(numStrings.ContainsKey(1)) {
+                numStrings.Remove(1);
+            }
+            Console.WriteLine("printing all the items");
+            foreach (var item in numStrings)
+            {
+                Console.Write($"The key is {item.Key} and value is {item.Value}");
+            }
 
+            /*
 
+            * Create two lists with integer data type, one for even numbers, one for odd
+
+            * Loop from 0-20
+
+            * if number is even, add to even list
+
+            * if number is odd, add to odd list
+
+            * Print even list
+
+            * Print odd list
+
+            */
+            List<int> evenNums = new List<int>();
+            List<int> oddNums = new List<int>();
+            for (int i = 0; i < 21; i++)
+            {
+                if(i%2 == 0)
+                {
+                    evenNums.Add(i);
+                }
+                else
+                {
+                    oddNums.Add(i);
+                }
+            }
+            Console.WriteLine("Printing Even nums");
+            Console.WriteLine( );
+            foreach (var item in evenNums)
+            {
+                Console.Write($"{item} ");
+                Thread.Sleep(250);
+            }
+            Console.WriteLine("Printing Odd nums");
+            Console.WriteLine();
+            foreach (var item in oddNums)
+            {
+                Console.Write($"{item} ");
+                Thread.Sleep(250);
+            }
             Console.ReadLine();
+
 
         }
     }
