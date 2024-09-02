@@ -404,9 +404,32 @@ namespace projectCsharp
                 Console.Write($"{item} ");
                 Thread.Sleep(250);
             }
+
+            /*
+
+            * Define and initialise two integers (num, length)
+
+            * (7,5) -> [7, 14, 21, 28, 35]
+
+            * Create int array with size length
+
+            * loop through and insert the (loop counter x num) into the array
+
+            * print the final array
+
+            */
+            int cnt = Convert.ToInt32(Console.ReadLine());
+            int len = Convert.ToInt32(Console.ReadLine());
+            int[] intArr = new int[len];
+            for (int i = 0; i < len; i++)
+            {
+                intArr[i] = i * cnt;
+            }
+            for (int i = 0; i < len; i++)
+            {
+                Console.Write($"{intArr[i]} ");
+            }
             Console.ReadLine();
-
-
         }
     }
 }
