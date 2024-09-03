@@ -418,17 +418,20 @@ namespace projectCsharp
             * print the final array
 
             */
-            int cnt = Convert.ToInt32(Console.ReadLine());
-            int len = Convert.ToInt32(Console.ReadLine());
-            int[] intArr = new int[len];
-            for (int i = 0; i < len; i++)
+            int multiplier = Convert.ToInt32(Console.ReadLine());
+            int length = Convert.ToInt32(Console.ReadLine());
+            int[] intArr = new int[length];
+
+            for (int i = 0; i < length; i++)
             {
-                intArr[i] = i * cnt;
+                intArr[i] = i * multiplier;
             }
-            for (int i = 0; i < len; i++)
+
+            foreach (int value in intArr)
             {
-                Console.Write($"{intArr[i]} ");
+                Console.Write($"{value} ");
             }
+
             Console.ReadLine();
         }
     }
