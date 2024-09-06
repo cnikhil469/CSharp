@@ -345,6 +345,50 @@ namespace projectCsharp
 
             Console.ReadLine();
 
-        }
+            * Create int array with size length
+
+            * loop through and insert the (loop counter x num) into the array
+
+            * print the final array
+
+            */
+            int multiplier = Convert.ToInt32(Console.ReadLine());
+            int length = Convert.ToInt32(Console.ReadLine());
+            int[] intArr = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                intArr[i] = i * multiplier;
+            }
+
+            foreach (int value in intArr)
+            {
+                Console.Write($"{value} ");
+            }
+
+            //Classes concept
+                public class Person
+            {
+                public string Name;
+                public int Age;
+
+                public void Greet()
+                {
+                    Console.WriteLine("Hello, " + Name);
+                }
+              }
+            //Exceptions
+            try 
+             {
+            int result = 10 / 0;
+             } 
+            catch (DivideByZeroException ex) 
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+
+            Console.ReadLine();
+            }
     }
 }
