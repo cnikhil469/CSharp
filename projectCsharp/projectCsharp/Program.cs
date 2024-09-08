@@ -9,10 +9,20 @@ using System.Threading;
 
 namespace projectCsharp
 {
+    class Test
+    {
+        static void Hello1()
+        {
+            Console.WriteLine("hello!!");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
+            Test test = new Test();
+            
 
             //{
             //    //Console.WriteLine("Hello World!");
@@ -330,154 +340,173 @@ namespace projectCsharp
             //}
             //Console.WriteLine($"The max number in the list is {nums.Max()}"); 
             ////Dictionary Concepts
-            Dictionary<int, string> numStrings = new Dictionary<int, string>
+            //Dictionary<int, string> numStrings = new Dictionary<int, string>
+            //{
+            //    {1, "Hello" },
+            //    {2, "Aloha" },
+            //    {3, "Finland" }
+            //};
+            //foreach (var item in numStrings)
+            //{
+            //    Console.Write($"The key is '{item.Key}' and value is '{item.Value}'");
+            //    Console.WriteLine();
+            //}
+            //KeyValuePair<int, string> pair = numStrings.ElementAt(1);
+            //Console.WriteLine($"The key is '{pair.Key}' and value '{pair.Value}'");
+            //////TryGetValue with dict
+            //if (numStrings.TryGetValue(1, out string hello))
+            //{
+            //    Console.WriteLine($"the out value is {hello}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The item with that key is not found!!");
+            //}
+            //////ContainsKey() & Remove() impl
+            //if(numStrings.ContainsKey(1)) {
+            //    numStrings.Remove(1);
+            //}
+            //Console.WriteLine("printing all the items");
+            //foreach (var item in numStrings)
+            //{
+            //    Console.Write($"The key is {item.Key} and value is {item.Value}");
+            //}
+
+            ///*
+
+            //* Create two lists with integer data type, one for even numbers, one for odd
+
+            //* Loop from 0-20
+
+            //* if number is even, add to even list
+
+            //* if number is odd, add to odd list
+
+            //* Print even list
+
+            //* Print odd list
+
+            //*/
+            //List<int> evenNums = new List<int>();
+            //List<int> oddNums = new List<int>();
+            //for (int i = 0; i < 21; i++)
+            //{
+            //    if(i%2 == 0)
+            //    {
+            //        evenNums.Add(i);
+            //    }
+            //    else
+            //    {
+            //        oddNums.Add(i);
+            //    }
+            //}
+            //Console.WriteLine("Printing Even nums");
+            //Console.WriteLine( );
+            //foreach (var item in evenNums)
+            //{
+            //    Console.Write($"{item} ");
+            //    Thread.Sleep(250);
+            //}
+            //Console.WriteLine("Printing Odd nums");
+            //Console.WriteLine();
+            //foreach (var item in oddNums)
+            //{
+            //    Console.Write($"{item} ");
+            //    Thread.Sleep(250);
+            //}
+
+            ///*
+
+            //* Define and initialise two integers (num, length)
+
+            //* (7,5) -> [7, 14, 21, 28, 35]
+
+            //* Create int array with size length
+
+            //* loop through and insert the (loop counter x num) into the array
+
+            //* print the final array
+
+            //*/
+            //int multiplier = Convert.ToInt32(Console.ReadLine());
+            //int length = Convert.ToInt32(Console.ReadLine());
+            //int[] intArr = new int[length];
+
+            //for (int i = 0; i < length; i++)
+            //{
+            //    intArr[i] = i * multiplier;
+            //}
+
+            //foreach (int value in intArr)
+            //{
+            //    Console.Write($"{value} ");
+            //}
+
+            //Console.ReadLine();
+
+            //* Create int array with size length
+
+            //* loop through and insert the (loop counter x num) into the array
+
+            //* print the final array
+
+            //*/
+            //int multiplier = Convert.ToInt32(Console.ReadLine());
+            //int length = Convert.ToInt32(Console.ReadLine());
+            //int[] intArr = new int[length];
+
+            //for (int i = 0; i < length; i++)
+            //{
+            //    intArr[i] = i * multiplier;
+            //}
+
+            //foreach (int value in intArr)
+            //{
+            //    Console.Write($"{value} ");
+            //}
+
+            ////Classes concept
+            //    public class Person
+            //{
+            //    public string Name;
+            //    public int Age;
+
+            //    public void Greet()
+            //    {
+            //        Console.WriteLine("Hello, " + Name);
+            //    }
+            //  }
+            ////Exceptions
+            //try 
+            // {
+            //int result = 10 / 0;
+            // } 
+            //catch (DivideByZeroException ex) 
+            //{
+            //    Console.WriteLine("Error: " + ex.Message);
+            //}
+            Console.Write("Enter the numer ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the len of array ");
+            int len = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[len];
+            for (int i = 0; i < len; i++)
             {
-                {1, "Hello" },
-                {2, "Aloha" },
-                {3, "Finland" }
-            };
-            foreach (var item in numStrings)
-            {
-                Console.Write($"The key is '{item.Key}' and value is '{item.Value}'");
-                Console.WriteLine();
+                arr[i] = num * i;
             }
-            KeyValuePair<int, string> pair = numStrings.ElementAt(1);
-            Console.WriteLine($"The key is '{pair.Key}' and value '{pair.Value}'");
-            ////TryGetValue with dict
-            if (numStrings.TryGetValue(1, out string hello))
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine($"the out value is {hello}");
-            }
-            else
-            {
-                Console.WriteLine("The item with that key is not found!!");
-            }
-            ////ContainsKey() & Remove() impl
-            if(numStrings.ContainsKey(1)) {
-                numStrings.Remove(1);
-            }
-            Console.WriteLine("printing all the items");
-            foreach (var item in numStrings)
-            {
-                Console.Write($"The key is {item.Key} and value is {item.Value}");
-            }
-
-            /*
-
-            * Create two lists with integer data type, one for even numbers, one for odd
-
-            * Loop from 0-20
-
-            * if number is even, add to even list
-
-            * if number is odd, add to odd list
-
-            * Print even list
-
-            * Print odd list
-
-            */
-            List<int> evenNums = new List<int>();
-            List<int> oddNums = new List<int>();
-            for (int i = 0; i < 21; i++)
-            {
-                if(i%2 == 0)
-                {
-                    evenNums.Add(i);
-                }
-                else
-                {
-                    oddNums.Add(i);
-                }
-            }
-            Console.WriteLine("Printing Even nums");
-            Console.WriteLine( );
-            foreach (var item in evenNums)
-            {
-                Console.Write($"{item} ");
+                Console.Write($"{arr[i]} ");
                 Thread.Sleep(250);
             }
-            Console.WriteLine("Printing Odd nums");
-            Console.WriteLine();
-            foreach (var item in oddNums)
-            {
-                Console.Write($"{item} ");
-                Thread.Sleep(250);
-            }
-
-            /*
-
-            * Define and initialise two integers (num, length)
-
-            * (7,5) -> [7, 14, 21, 28, 35]
-
-            * Create int array with size length
-
-            * loop through and insert the (loop counter x num) into the array
-
-            * print the final array
-
-            */
-            int multiplier = Convert.ToInt32(Console.ReadLine());
-            int length = Convert.ToInt32(Console.ReadLine());
-            int[] intArr = new int[length];
-
-            for (int i = 0; i < length; i++)
-            {
-                intArr[i] = i * multiplier;
-            }
-
-            foreach (int value in intArr)
-            {
-                Console.Write($"{value} ");
-            }
-
+            //functions
+            Hello();
             Console.ReadLine();
-
-            * Create int array with size length
-
-            * loop through and insert the (loop counter x num) into the array
-
-            * print the final array
-
-            */
-            int multiplier = Convert.ToInt32(Console.ReadLine());
-            int length = Convert.ToInt32(Console.ReadLine());
-            int[] intArr = new int[length];
-
-            for (int i = 0; i < length; i++)
-            {
-                intArr[i] = i * multiplier;
-            }
-
-            foreach (int value in intArr)
-            {
-                Console.Write($"{value} ");
-            }
-
-            //Classes concept
-                public class Person
-            {
-                public string Name;
-                public int Age;
-
-                public void Greet()
-                {
-                    Console.WriteLine("Hello, " + Name);
-                }
-              }
-            //Exceptions
-            try 
-             {
-            int result = 10 / 0;
-             } 
-            catch (DivideByZeroException ex) 
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-
-
-            Console.ReadLine();
-            }
+        }
+        static void Hello()
+        {
+            Console.WriteLine("Hello World!!");
+        }
     }
-}
+    
+}    
