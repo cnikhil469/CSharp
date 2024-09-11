@@ -501,11 +501,17 @@ namespace projectCsharp
             }
             //functions
             Hello();
+            int addValue = AddNumbers(5, 4);
+            Console.WriteLine($"The result is {addValue}");
             Console.ReadLine();
         }
         static void Hello()
         {
             Console.WriteLine("Hello World!!");
+        }
+        static int AddNumbers(int a, int b)
+        {
+            return a + b;
         }
     }
     
