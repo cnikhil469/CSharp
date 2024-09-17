@@ -503,6 +503,16 @@ namespace projectCsharp
             Hello();
             int addValue = AddNumbers(5, 4);
             Console.WriteLine($"The result is {addValue}");
+
+            public int Add(int a, int b)
+            {
+                return a + b;
+            }
+
+            public double Add(double a, double b)
+            {
+                return a + b;
+            }
             Console.ReadLine();
         }
         static void Hello()
