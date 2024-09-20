@@ -500,20 +500,23 @@ namespace projectCsharp
                 Thread.Sleep(250);
             }
             //functions
-            Hello();
             int addValue = AddNumbers(5, 4);
             Console.WriteLine($"The result is {addValue}");
-            int g = Console.ReadLine();
+            int g = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"aloha {g}");
             //public int Add(int a, int b)
             //{
             //    return a + b;
             //}
-
             //public double Add(double a, double b)
             //{
             //    return a + b;
             //}
+            Hello();
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int h = AddNumbers(a, b);
+            Console.WriteLine($"The sum of {a} and {b} is {h}");
             Console.ReadLine();
         }
         static void Hello()
