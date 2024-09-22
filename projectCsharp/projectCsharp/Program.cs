@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace projectCsharp
 {
@@ -22,7 +23,7 @@ namespace projectCsharp
         static void Main(string[] args)
         {
             Test test = new Test();
-            
+
 
             //{
             //    //Console.WriteLine("Hello World!");
@@ -485,47 +486,74 @@ namespace projectCsharp
             //{
             //    Console.WriteLine("Error: " + ex.Message);
             //}
-            Console.Write("Enter the numer ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the len of array ");
-            int len = Convert.ToInt32(Console.ReadLine());
-            int[] arr = new int[len];
-            for (int i = 0; i < len; i++)
-            {
-                arr[i] = num * i;
-            }
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write($"{arr[i]} ");
-                Thread.Sleep(250);
-            }
-            //functions
-            int addValue = AddNumbers(5, 4);
-            Console.WriteLine($"The result is {addValue}");
-            int g = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"aloha {g}");
-            //public int Add(int a, int b)
+            //Console.Write("Enter the numer ");
+            //int num = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter the len of array ");
+            //int len = Convert.ToInt32(Console.ReadLine());
+            //int[] arr = new int[len];
+            //for (int i = 0; i < len; i++)
             //{
-            //    return a + b;
+            //    arr[i] = num * i;
             //}
-            //public double Add(double a, double b)
+            //for (int i = 0; i < arr.Length; i++)
             //{
-            //    return a + b;
+            //    Console.Write($"{arr[i]} ");
+            //    Thread.Sleep(250);
             //}
-            Hello();
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int h = AddNumbers(a, b);
-            Console.WriteLine($"The sum of {a} and {b} is {h}");
+            ////functions
+            //int addValue = AddNumbers(5, 4);
+            //Console.WriteLine($"The result is {addValue}");
+            //int g = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine($"aloha {g}");
+            ////public int Add(int a, int b)
+            ////{
+            ////    return a + b;
+            ////}
+            ////public double Add(double a, double b)
+            ////{
+            ////    return a + b;
+            ////}
+            //Hello();
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //int b = Convert.ToInt32(Console.ReadLine());
+            //int h = AddNumbers(a, b);
+            //Console.WriteLine($"The sum of {a} and {b} is {h}");
+            Console.Title = name;
+            printName();
+            int h = 5;
+            Dictionary<int, string> numStringPair = new Dictionary<int, string>[h];
+            for(int i=0; i<h; i++)
+            {
+                numStringPair[randonNumber()] = randomString();
+            }
+            foreach(var item in numStringPair)
+            {
+                Console.WriteLine($"{item} ");
+            }
             Console.ReadLine();
         }
-        static void Hello()
+        //static void Hello()
+        //{
+        //    Console.WriteLine("Hello World!!");
+        //}
+        //static int AddNumbers(int a, int b)
+        //{
+        //    return a + b;
+        //}
+        static string name = "aloha";
+        static void printName()
         {
-            Console.WriteLine("Hello World!!");
+            Console.WriteLine(name);
         }
-        static int AddNumbers(int a, int b)
+        static int randonNumber()
         {
-            return a + b;
+            Console.WriteLine("enter a number");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        static string randomString()
+        {
+            Console.WriteLine("enter a string");
+            return Console.ReadLine();
         }
     }
     
