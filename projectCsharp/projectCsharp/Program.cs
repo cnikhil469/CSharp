@@ -528,7 +528,7 @@ namespace projectCsharp
             }
             foreach(var item in numStringPair)
             {
-                Console.WriteLine($"{item}
+                Console.WriteLine($"{item} ");
             }
             Console.ReadLine();
         }
