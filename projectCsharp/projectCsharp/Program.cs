@@ -518,17 +518,24 @@ namespace projectCsharp
             //int b = Convert.ToInt32(Console.ReadLine());
             //int h = AddNumbers(a, b);
             //Console.WriteLine($"The sum of {a} and {b} is {h}");
+
             Console.Title = name;
             printName();
-            int h = 5;
-            Dictionary<int, string> numStringPair = new Dictionary<int, string>[h];
-            for(int i=0; i<h; i++)
+
+            //int h = 5;
+            //Dictionary<int, string> numStringPair = new Dictionary<int, string>[h];
+            //for(int i=0; i<h; i++)
+            //{
+            //    numStringPair[randonNumber()] = randomString();
+            //}
+            //foreach(var item in numStringPair)
+            //{
+            //    Console.WriteLine($"{item} ");
+            //}
+            int[] arr = randomArray();
+            foreach(var item in arr)
             {
-                numStringPair[randonNumber()] = randomString();
-            }
-            foreach(var item in numStringPair)
-            {
-                Console.WriteLine($"{item} ");
+                Console.WriteLine(item);
             }
             Console.ReadLine();
         }
@@ -554,6 +561,15 @@ namespace projectCsharp
         {
             Console.WriteLine("enter a string");
             return Console.ReadLine();
+        }
+        static int[] randomArray()
+        {
+            int[] arr = new int[5];
+            for (int i=0; i<5;  i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            return arr;
         }
     }
     
