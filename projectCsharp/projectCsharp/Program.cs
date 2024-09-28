@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Threading;
 using System.Security.Cryptography;
+using System.Security.AccessControl;
 
 namespace projectCsharp
 {
@@ -519,24 +520,30 @@ namespace projectCsharp
             //int h = AddNumbers(a, b);
             //Console.WriteLine($"The sum of {a} and {b} is {h}");
 
-            Console.Title = name;
-            printName();
-
+            //Console.Title = name;
+            //printName();
+            ////implementing the string and int values in dictionary
             //int h = 5;
-            //Dictionary<int, string> numStringPair = new Dictionary<int, string>[h];
-            //for(int i=0; i<h; i++)
+            //Dictionary<int, string> intStringDict = new Dictionary<int, string>();
+            //for (int i=0; i<h; i++)
             //{
-            //    numStringPair[randonNumber()] = randomString();
+            //    intStringDict[randonNumber()] = randomString();
             //}
-            //foreach(var item in numStringPair)
+            //foreach(var item in intStringDict)
             //{
-            //    Console.WriteLine($"{item} ");
+            //    Console.WriteLine($"key: {item.Key}, value: {item.Value}");
             //}
-            int[] arr = randomArray();
-            foreach(var item in arr)
-            {
-                Console.WriteLine(item);
-            }
+            //int[] arr = randomArray();
+            //foreach(var item in arr)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            ////function parameters concept; 
+            string myName = inpString("Enter your name: ");
+            int age = inpAge("Enter your age: ");
+            string userDetails = nameAge(myName, age);
+            Console.WriteLine(userDetails);
             Console.ReadLine();
         }
         //static void Hello()
@@ -547,6 +554,20 @@ namespace projectCsharp
         //{
         //    return a + b;
         //}
+        static string inpString(string msg)
+        {
+            Console.WriteLine(msg);
+            return Console.ReadLine();
+        }
+        static int inpAge(string msg)
+        {
+            Console.WriteLine(msg);
+            return Convert.ToInt32(Console.ReadLine());
+        }
+        static string nameAge(string name, int age)
+        {
+            return $"my name is {name} and my age is {age}";
+        }
         static string name = "aloha";
         static void printName()
         {
