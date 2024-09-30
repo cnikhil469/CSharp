@@ -544,7 +544,7 @@ namespace projectCsharp
             int age = inpAge("Enter your age: ");
             string userDetails = nameAge(myName, age);
             Console.WriteLine(userDetails);
-            Console.ReadLine
+            Console.ReadLine();
         }
         //static void Hello()
         //{
